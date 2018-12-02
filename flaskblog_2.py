@@ -1,0 +1,16 @@
+from flask import Flask
+app = Flask(__name__)
+
+
+@app.route("/")
+@app.route("/home")
+def hello():
+    return "<h1>Home Page</h1>"
+
+
+@app.route("/about")
+def about():
+    return "<h1>About page</h1>"
+
+
+app.run(debug=True, port=9000)
